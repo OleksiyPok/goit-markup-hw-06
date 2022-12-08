@@ -619,9 +619,9 @@ body {
   width: 528px;
   height: 581px;
   background-color: var(--primary-bg-color);
-  padding-top: 35px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 
   transform: translate(-50%, -50%) scale(1);
 
@@ -656,4 +656,51 @@ body {
 .modal-close-button:hover .modal-close-icon {
   fill: var(--tertiary-color);
   cursor: pointer;
+}
+
+.form {
+  /* outline: 1px solid tomato; */
+  display: block;
+  flex-direction: column;
+}
+
+.form-title {
+  text-align: center;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 20px;
+  /* letter-spacing: 0.03em; */
+  line-height: 1.15;
+}
+
+.form-field {
+  /* outline: 1px solid limegreen; */
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-color);
+}
+
+.form-field input {
+  margin-top: 4px;
+  color: var(--primary-color);
+}
+
+.form-field textarea {
+  margin-top: 4px;
+  color: var(--primary-color);
+}
+
+.form-textarea {
+  /* padding: 12px; */
+  /* resize: none; */
+  /* font-family: inherit; */
+  /* font-size: inherit; */
 }
