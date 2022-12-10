@@ -750,34 +750,117 @@ ul {
 }
 
 .form-field {
-  /* outline: 1px solid limegreen; */
+  position: relative;
   margin-top: 10px;
 
   display: flex;
   flex-direction: column;
 }
 
-.form-field label {
+.form-input,
+.form-textarea {
+  margin-top: 4px;
+  border-radius: 4px;
+  color: var(--primary-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input {
+  height: 40px;
+  padding-left: 42px;
+}
+
+.form-textarea {
+  resize: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* .form-input:hover, */
+.form-input:focus,
+/* .form-textarea:hover, */
+.form-textarea:focus {
+  border: 1px solid var(--tertiary-color);
+  cursor: pointer;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: none;
+}
+
+.form-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--primary-color);
 }
 
-.form-field input {
-  margin-top: 4px;
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+}
+
+.agreement-label {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
   color: var(--primary-color);
-  height: 40px;
+}
+
+.agreement-checkbox--input {
+}
+
+.agreement-checkbox--dec {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--secondary-color);
+  background-color: blue;
+}
+
+.agreement-icon {
+  fill: red;
+}
+
+.form-button--submit {
+  margin-top: 30px;
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--tertiary-color);
   border-radius: 4px;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--secondary-button-txt-color);
+
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field textarea {
-  margin-top: 4px;
-  color: var(--primary-color);
-  resize: none;
+.form-button--submit:hover,
+.form-button--submit:focus {
+  background-color: var(--tertiary-button-bg-color);
 }
 
-.form-textarea {
-  /* padding: 12px; */
-  /* resize: none; */
+.form-icon-t {
+  fill: red;
+  /* stroke: blue; */
 }
