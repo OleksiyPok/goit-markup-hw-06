@@ -50,6 +50,9 @@ p {
   margin: 0;
 }
 
+a.text:active,
+a.text:hover,
+a.text,
 a {
   text-decoration: none;
 }
@@ -755,6 +758,12 @@ ul {
 
   display: flex;
   flex-direction: column;
+  outline: 1px solid greenyellow;
+}
+
+.form-field--agreement {
+  margin-top: 20px;
+  outline: 1px solid greenyellow;
 }
 
 .form-input,
@@ -763,7 +772,7 @@ ul {
   border-radius: 4px;
   color: var(--primary-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--transition-variable);
 }
 
 .form-input {
@@ -779,9 +788,7 @@ ul {
   padding-right: 16px;
 }
 
-/* .form-input:hover, */
 .form-input:focus,
-/* .form-textarea:hover, */
 .form-textarea:focus {
   border: 1px solid var(--tertiary-color);
   cursor: pointer;
@@ -806,31 +813,57 @@ ul {
 }
 
 .agreement-label {
-  margin-top: 20px;
-  display: flex;
+  display: inline-block;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
+  align-items: center; */
+  /* gap: 7px; */
 
-  font-weight: 400;
+  position: relative;
+  padding-left: 38px;
+
+  /* font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--primary-color);
+  color: var(--primary-color); */
+
+  /* outline: 1px solid greenyellow; */
 }
 
-.agreement-checkbox--input {
+.agreement-checkbox--hidden {
+  appearance: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.agreement-checkbox--dec {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
+.agreement-checkbox--svg {
+  position: absolute;
+  left: 12px;
+  top: 5px;
+
   border: 1px solid var(--secondary-color);
-  background-color: blue;
+  border-radius: 2px;
+  fill: var(--primary-bg-color);
+  transition: border-color var(--transition-variable), background-color var(--transition-variable);
 }
 
-.agreement-icon {
-  fill: red;
+.agreement-checkbox--hidden:checked + .agreement-checkbox--svg {
+  background-color: var(--tertiary-color);
+  border-color: var(--tertiary-color);
+}
+
+.agreement-link {
+  color: var(--tertiary-color);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
 .form-button--submit {
@@ -852,15 +885,10 @@ ul {
   color: var(--secondary-button-txt-color);
 
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-variable);
 }
 
 .form-button--submit:hover,
 .form-button--submit:focus {
   background-color: var(--tertiary-button-bg-color);
-}
-
-.form-icon-t {
-  fill: red;
-  /* stroke: blue; */
 }
