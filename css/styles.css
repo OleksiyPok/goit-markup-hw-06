@@ -793,9 +793,9 @@ ul {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-input:hover,
+/* .form-input:hover, */
+/* .form-textarea:hover, */
 .form-input:focus,
-.form-textarea:hover,
 .form-textarea:focus {
   border: 1px solid var(--tertiary-color);
   cursor: pointer;
@@ -854,7 +854,7 @@ ul {
 }
 
 .agreement-checkbox--hidden:focus + .agreement-checkbox--svg {
-  outline: var(--secondary-color) auto 1px;
+  /* outline: var(--secondary-color) auto 1px; */
 }
 
 .agreement-link {
