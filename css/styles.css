@@ -814,22 +814,8 @@ ul {
 
 .agreement-label {
   display: inline-block;
-  /* display: flex;
-  justify-content: center;
-  align-items: baseline;
-  align-items: center; */
-  /* gap: 7px; */
-
   position: relative;
   padding-left: 38px;
-
-  /* font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--primary-color); */
-
-  /* outline: 1px solid greenyellow; */
 }
 
 .agreement-checkbox--hidden {
